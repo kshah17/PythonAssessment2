@@ -30,7 +30,13 @@
 	# How does a for loop iterate through a string?
 
 def one(input):
-	return ""
+	result = ""
+	for i in range(len(input)):
+		result += input[i] + input[i] + input[i]
+	return result
+
+#PASSED
+# for loop, use range(len(str)) i
 
 	# <QUESTION 2>
 
@@ -46,9 +52,17 @@ def one(input):
 	# <HINT>
 	# What operator will give you the remainder?
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(range).
+	
 
 def two(input):
-    return False
+	for i in range(2,input):
+		if input % i == 0:
+			return False
+		else:
+			return True
+			
+#use % - essentially finding a prime number.
+#for loop - use a range? - prime always > 1, 
 
 	# <QUESTION 3>
 
@@ -62,10 +76,17 @@ def two(input):
 	# three(5) → 6170
 
 	# <HINT>
-	# What happens if you multiply a string by a number?
+	# What happens if you multiply a string by a number? - python returns a new string? 
 
 def three(a):
-	return 1
+	n1 = int( "%s" %a )
+	n2 = int( "%s%s" % (a,a))
+	n3 = int( "%s%s%s" % (a,a,a))
+	n4 = int( "%s%s%s%s" % (a,a,a,a))
+	
+	return (n1 + n2 + n3 + n4)
+
+# use n1, n2, n3? "(%s)" or ("s%") combines strings (%s%s) or ("%a" %s%s)? 
 
 	# <QUESTION 4>
 
@@ -91,10 +112,16 @@ def three(a):
 
 	# <HINT>
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(list.insert).
-	# How would you seperate a string into characters?
+	# How would you seperate a string into characters? [0,1,2,3,4...] 
 
 def four(input1, input2):
-	return ""
+	len1 = len(input1)
+	len2 = len(input2)
+	if len1 == len2:
+		return "".join(i for j in zip(len1, len2) for i in j)
+	
+# help(list.insert) - list(zip), join(), for i in range(len(input1)):, check lengths first, similar to
+
 
 	# <QUESTION 5>
 
@@ -110,8 +137,8 @@ def four(input1, input2):
 	# There is a module which can be used to generate random numbers, this module is called random.
 	# The random module contains a function called randint.
 
-def five():
-    return []
+# def five():
+#     return []
 
 	# <QUESTION 6>
 
@@ -129,8 +156,8 @@ def five():
 	# <HINT>
 	# There are no hints for this question.
     
-def six(input):
-	return False
+# def six(input):
+# 	return False
 
 	# <QUESTION 7>
 
@@ -153,8 +180,8 @@ def six(input):
 	# There is a function for lists called sort.
 	# Use the cli to access the documentation help(list.sort)
 
-def seven(a, b, c):
-	return False
+# def seven(a, b, c):
+# 	return False
 
 	# <QUESTION 8>
 
@@ -171,8 +198,8 @@ def seven(a, b, c):
 	# <HINT>
     # Use the cli to access the documentation help(str.replace)
 
-def eight(input,  a):
-	return ""
+# def eight(input,  a):
+# 	return ""
 
 	# <QUESTION 9>
 
@@ -188,8 +215,8 @@ def eight(input,  a):
 	# <HINT> 
 	# There are no hints for this question.
 
-def nine(string1, string2):
-    return False
+# def nine(string1, string2):
+#     return False
 
 	# <QUESTION 10>
 
@@ -206,5 +233,5 @@ def nine(string1, string2):
 	# <HINT>
 	# Think about nesting for loops.
 
-def ten(X,Y):
-	return []
+# def ten(X,Y):
+# 	return []
